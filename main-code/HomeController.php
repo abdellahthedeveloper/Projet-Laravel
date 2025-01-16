@@ -14,13 +14,7 @@ class HomeController extends Controller
     public function index(){
         $data=Book::all(); // Récupère tous les livres
         return view('home.index',compact('data')); // Retourne la vue de la page d'accueil avec les données des livres
-    }  
-
-    // Méthode commentée : affichage des détails d'un livre
-    // public function book_details($id){
-    //     $book=Book::find($id); // Trouve le livre par son id
-    //     return view('home.book_details',compact('book')); // Retourne la vue des détails du livre avec les données du livre
-    // }
+    } 
 
     // Cette méthode gère l'emprunt de livres
     public function borrow_books($id){
